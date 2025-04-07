@@ -10,16 +10,23 @@ import SwiftUI
 
 class HomeCoordinator: RootCoordinator, HomeCoordinatorProtocol {
     let searchUsernameViewFactory: ((((GitHubUser) -> Void)?) -> SearchUsernameViewProtocol)?
-    let profileViewAssembly: ((GitHubUser,
+    let profileViewFactory: ((GitHubUser,
                                ((GitHubUser) -> Void)?,
                                ((GitHubUser) -> Void)?) -> ProfileViewProtocol)?
+    let followerFollowingListFactory: ((GitHubUser,
+                                        FollowerFollowingListViewModel.UserListType,
+                                        ((GitHubUser) -> Void)?) -> FollowerFollowingListViewProtocol)?
     init(navigationController: Router,
          searchUsernameViewFactory: ((((GitHubUser) -> Void)?) -> SearchUsernameViewProtocol)?,
-         profileViewAssembly: ((GitHubUser,
+         profileViewFactory: ((GitHubUser,
                                     ((GitHubUser) -> Void)?,
-                                    ((GitHubUser) -> Void)?) -> ProfileViewProtocol)?) {
+                                    ((GitHubUser) -> Void)?) -> ProfileViewProtocol)?,
+         followerFollowingListFactory: ((GitHubUser,
+                                             FollowerFollowingListViewModel.UserListType,
+                                             ((GitHubUser) -> Void)?) -> FollowerFollowingListViewProtocol)?) {
         self.searchUsernameViewFactory = searchUsernameViewFactory
-        self.profileViewAssembly = profileViewAssembly
+        self.profileViewFactory = profileViewFactory
+        self.followerFollowingListFactory = followerFollowingListFactory
         
         super.init(navigationController: navigationController)
     }
@@ -38,7 +45,7 @@ class HomeCoordinator: RootCoordinator, HomeCoordinatorProtocol {
     }
     
     func showUserProfile(using user: GitHubUser) {
-        guard let profileView = profileViewAssembly?(user,
+        guard let profileView = profileViewFactory?(user,
                                                      showFollowers(for:),
                                                      showFollowing(for:)) as? ProfileView else {
             fatalError("profileView not resolved")
@@ -48,8 +55,22 @@ class HomeCoordinator: RootCoordinator, HomeCoordinatorProtocol {
     }
     
     func showFollowers(for user: GitHubUser) {
+        guard let followerFollowingListView = followerFollowingListFactory?(user,
+                                                                            .followers,
+                                                                            showUserProfile(using:)) as? FollowerFollowingListView else {
+            fatalError("followerFollowingListView not resolved")
+        }
+        
+        self.navigationController.present(followerFollowingListView.toNavigable(with: "follower_\(user.login)_\(UUID())"))
     }
     
     func showFollowing(for user: GitHubUser) {
+        guard let followerFollowingListView = followerFollowingListFactory?(user,
+                                                                            .following,
+                                                                            showUserProfile(using:)) as? FollowerFollowingListView else {
+            fatalError("followerFollowingListView not resolved")
+        }
+        
+        self.navigationController.present(followerFollowingListView.toNavigable(with: "following_\(user.login)_\(UUID())"))
     }
 }

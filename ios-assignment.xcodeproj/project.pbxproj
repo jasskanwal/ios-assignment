@@ -42,6 +42,9 @@
 		2A68DB202DA3831E0066AE01 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB1F2DA3831E0066AE01 /* ProfileView.swift */; };
 		2A68DB222DA383300066AE01 /* ProfileViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB212DA383300066AE01 /* ProfileViewAssembly.swift */; };
 		2A68DB252DA383780066AE01 /* ProfileViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB242DA383780066AE01 /* ProfileViewContract.swift */; };
+		2A68DB282DA3894B0066AE01 /* FollowerFollowingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB272DA3894B0066AE01 /* FollowerFollowingListView.swift */; };
+		2A68DB2A2DA389570066AE01 /* FollowerFollowingListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB292DA389570066AE01 /* FollowerFollowingListAssembly.swift */; };
+		2A68DB2D2DA389680066AE01 /* FollowerFollowingListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB2C2DA389680066AE01 /* FollowerFollowingListContract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +104,9 @@
 		2A68DB1F2DA3831E0066AE01 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2A68DB212DA383300066AE01 /* ProfileViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewAssembly.swift; sourceTree = "<group>"; };
 		2A68DB242DA383780066AE01 /* ProfileViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewContract.swift; sourceTree = "<group>"; };
+		2A68DB272DA3894B0066AE01 /* FollowerFollowingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerFollowingListView.swift; sourceTree = "<group>"; };
+		2A68DB292DA389570066AE01 /* FollowerFollowingListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerFollowingListAssembly.swift; sourceTree = "<group>"; };
+		2A68DB2C2DA389680066AE01 /* FollowerFollowingListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerFollowingListContract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +213,7 @@
 		2A68DAD32DA3483E0066AE01 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				2A68DB262DA389370066AE01 /* FollowerFollowingList */,
 				2A68DB1E2DA380F60066AE01 /* ProfileView */,
 				2A68DB0E2DA362F90066AE01 /* SearchUsername */,
 			);
@@ -233,6 +240,7 @@
 		2A68DAD72DA3483E0066AE01 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				2A68DB2B2DA3895D0066AE01 /* FollowerFollowingList */,
 				2A68DB232DA3836B0066AE01 /* ProfileView */,
 				2A68DB0D2DA362EB0066AE01 /* SearchUsername */,
 			);
@@ -429,6 +437,23 @@
 			path = ProfileView;
 			sourceTree = "<group>";
 		};
+		2A68DB262DA389370066AE01 /* FollowerFollowingList */ = {
+			isa = PBXGroup;
+			children = (
+				2A68DB272DA3894B0066AE01 /* FollowerFollowingListView.swift */,
+				2A68DB292DA389570066AE01 /* FollowerFollowingListAssembly.swift */,
+			);
+			path = FollowerFollowingList;
+			sourceTree = "<group>";
+		};
+		2A68DB2B2DA3895D0066AE01 /* FollowerFollowingList */ = {
+			isa = PBXGroup;
+			children = (
+				2A68DB2C2DA389680066AE01 /* FollowerFollowingListContract.swift */,
+			);
+			path = FollowerFollowingList;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -572,6 +597,7 @@
 				2A68DAEE2DA3483E0066AE01 /* HomeCoordinator.swift in Sources */,
 				2A68DB222DA383300066AE01 /* ProfileViewAssembly.swift in Sources */,
 				2A68DB0C2DA361920066AE01 /* HomeCoordinatorAssembly.swift in Sources */,
+				2A68DB282DA3894B0066AE01 /* FollowerFollowingListView.swift in Sources */,
 				2A68DB202DA3831E0066AE01 /* ProfileView.swift in Sources */,
 				2A68DB142DA3634A0066AE01 /* SearchUsernameViewModel.swift in Sources */,
 				2A68DAED2DA3483E0066AE01 /* AppCoordinatorProtocol.swift in Sources */,
@@ -586,7 +612,9 @@
 				2A68DAF22DA3483E0066AE01 /* View+Extension.swift in Sources */,
 				2A68DAF42DA3483E0066AE01 /* NetworkServiceProtocol.swift in Sources */,
 				2A68DAF52DA3483E0066AE01 /* NetworkService.swift in Sources */,
+				2A68DB2D2DA389680066AE01 /* FollowerFollowingListContract.swift in Sources */,
 				2A68DB122DA363280066AE01 /* SearchUsernameAssembly.swift in Sources */,
+				2A68DB2A2DA389570066AE01 /* FollowerFollowingListAssembly.swift in Sources */,
 				2A68DAEF2DA3483E0066AE01 /* HomeCoordinatorProtocol.swift in Sources */,
 				2A68DAF62DA3483E0066AE01 /* SessionManager.swift in Sources */,
 			);

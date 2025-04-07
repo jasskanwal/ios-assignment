@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+class FollowerFollowingListAssembly {
+    static func FollowerFollowingListAssembly() -> ((GitHubUser,
+                                                     FollowerFollowingListViewModel.UserListType,
+                                                     ((GitHubUser) -> Void)?) -> FollowerFollowingListViewProtocol)? {
+        return { user, type, onTap in
+            let viewModel = FollowerFollowingListViewModel(user: user, type: type, onUserTapped: onTap)
+            return FollowerFollowingListView(viewModel: viewModel)
+        }
+    }
+}
