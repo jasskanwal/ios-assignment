@@ -45,6 +45,8 @@
 		2A68DB282DA3894B0066AE01 /* FollowerFollowingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB272DA3894B0066AE01 /* FollowerFollowingListView.swift */; };
 		2A68DB2A2DA389570066AE01 /* FollowerFollowingListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB292DA389570066AE01 /* FollowerFollowingListAssembly.swift */; };
 		2A68DB2D2DA389680066AE01 /* FollowerFollowingListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB2C2DA389680066AE01 /* FollowerFollowingListContract.swift */; };
+		2A68DB302DA38D320066AE01 /* FollowersListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB2F2DA38D320066AE01 /* FollowersListRequest.swift */; };
+		2A68DB332DA38D6A0066AE01 /* FollowingListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB322DA38D6A0066AE01 /* FollowingListRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,8 @@
 		2A68DB272DA3894B0066AE01 /* FollowerFollowingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerFollowingListView.swift; sourceTree = "<group>"; };
 		2A68DB292DA389570066AE01 /* FollowerFollowingListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerFollowingListAssembly.swift; sourceTree = "<group>"; };
 		2A68DB2C2DA389680066AE01 /* FollowerFollowingListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerFollowingListContract.swift; sourceTree = "<group>"; };
+		2A68DB2F2DA38D320066AE01 /* FollowersListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListRequest.swift; sourceTree = "<group>"; };
+		2A68DB322DA38D6A0066AE01 /* FollowingListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingListRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +254,8 @@
 		2A68DADA2DA3483E0066AE01 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				2A68DB312DA38D550066AE01 /* FollowingListRequest */,
+				2A68DB2E2DA38D190066AE01 /* FollowersListRequest */,
 				2A68DB1A2DA3738F0066AE01 /* SearchUsernameRequest */,
 				2A68DB152DA3641F0066AE01 /* GithubUser */,
 				2A68DAD92DA3483E0066AE01 /* HomeDataServiceProtocol.swift */,
@@ -454,6 +460,22 @@
 			path = FollowerFollowingList;
 			sourceTree = "<group>";
 		};
+		2A68DB2E2DA38D190066AE01 /* FollowersListRequest */ = {
+			isa = PBXGroup;
+			children = (
+				2A68DB2F2DA38D320066AE01 /* FollowersListRequest.swift */,
+			);
+			path = FollowersListRequest;
+			sourceTree = "<group>";
+		};
+		2A68DB312DA38D550066AE01 /* FollowingListRequest */ = {
+			isa = PBXGroup;
+			children = (
+				2A68DB322DA38D6A0066AE01 /* FollowingListRequest.swift */,
+			);
+			path = FollowingListRequest;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -591,7 +613,9 @@
 				2A68DAEC2DA3483E0066AE01 /* AppCoordinator.swift in Sources */,
 				2A68DB072DA34F720066AE01 /* AppCoordinatorAssembly.swift in Sources */,
 				2A68DB1C2DA373B60066AE01 /* SearchUsernameRequest.swift in Sources */,
+				2A68DB302DA38D320066AE01 /* FollowersListRequest.swift in Sources */,
 				2A68DAFB2DA349A50066AE01 /* Coordinator.swift in Sources */,
+				2A68DB332DA38D6A0066AE01 /* FollowingListRequest.swift in Sources */,
 				2A68DAF32DA3483E0066AE01 /* CoordinatorProtocol.swift in Sources */,
 				2A68DB172DA3642F0066AE01 /* GithubUser.swift in Sources */,
 				2A68DAEE2DA3483E0066AE01 /* HomeCoordinator.swift in Sources */,
