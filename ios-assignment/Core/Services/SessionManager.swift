@@ -22,7 +22,7 @@ class SessionManager {
         
         // Add common headers
         
-        urlRequest.setValue("application/json", forHTTPHeaderField: "accept")
+        urlRequest.setValue("application/vnd.github+json", forHTTPHeaderField: "accept")
         
         return urlRequest
     }
