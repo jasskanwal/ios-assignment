@@ -32,11 +32,21 @@ class ProfileViewModel: ProfileViewModelProtocol, ObservableObject {
     }
     
     func followersTapped() {
-        self.onFollowersTapped?(user)
+        switch state {
+        case .success(let gitHubUser):
+            self.onFollowersTapped?(gitHubUser)
+        default:
+            break
+        }
     }
     
     func followingTapped() {
-        self.onFollowingTapped?(user)
+        switch state {
+        case .success(let gitHubUser):
+            self.onFollowingTapped?(gitHubUser)
+        default:
+            break
+        }
     }
     
     func onLoad() {
