@@ -94,6 +94,7 @@
 		2A68DB162DA3642F0066AE01 /* GithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUser.swift; sourceTree = "<group>"; };
 		2A68DB182DA365AB0066AE01 /* SearchUsernameContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsernameContract.swift; sourceTree = "<group>"; };
 		2A68DB1B2DA373B60066AE01 /* SearchUsernameRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsernameRequest.swift; sourceTree = "<group>"; };
+		2A68DB1D2DA378900066AE01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +145,7 @@
 		2A68DA4D2DA347510066AE01 /* ios-assignment */ = {
 			isa = PBXGroup;
 			children = (
+				2A68DB1D2DA378900066AE01 /* Info.plist */,
 				2A68DAEB2DA3483E0066AE01 /* Core */,
 				2A68DADF2DA3483E0066AE01 /* Flows */,
 				2A68DA4E2DA347510066AE01 /* ios_assignmentApp.swift */,
@@ -725,6 +727,7 @@
 				DEVELOPMENT_TEAM = N8U6BV5KAB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ios-assignment/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -754,6 +757,7 @@
 				DEVELOPMENT_TEAM = N8U6BV5KAB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ios-assignment/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

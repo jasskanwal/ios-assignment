@@ -8,5 +8,4 @@
 import Foundation
 
 protocol SearchUsernameViewProtocol {
-    var viewModel: SearchUsernameViewModelProtocol { get set }
 }
