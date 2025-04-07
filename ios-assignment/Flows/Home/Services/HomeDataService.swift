@@ -20,13 +20,17 @@ class HomeDataService: HomeDataServiceProtocol {
         self.networkService.request(using: request, completion: completion)
     }
     
-    func fetchfollowersList(username: String, completion: @escaping (Result<[GitHubUser], NetworkError>) -> Void) {
-        let request = FollowersListRequest(userName: username)
+    func fetchfollowersList(username: String,
+                            page: Int,
+                            completion: @escaping (Result<[GitHubUser], NetworkError>) -> Void) {
+        let request = FollowersListRequest(userName: username, page: page)
         self.networkService.request(using: request, completion: completion)
     }
     
-    func fetchfollowingList(username: String, completion: @escaping (Result<[GitHubUser], NetworkError>) -> Void) {
-        let request = FollowingListRequest(userName: username)
+    func fetchfollowingList(username: String, 
+                            page: Int,
+                            completion: @escaping (Result<[GitHubUser], NetworkError>) -> Void) {
+        let request = FollowingListRequest(userName: username, page: page)
         self.networkService.request(using: request, completion: completion)
     }
 }

@@ -12,20 +12,37 @@ struct FollowerFollowingListView: FollowerFollowingListViewProtocol, View {
     
     var body: some View {
         List {
-            switch viewModel.state {
-            case .loading:
-                ProgressView()
-            case .success(let array):
-                ForEach(array) { user in
-                    Button {
-                        viewModel.onUserTapped?(user)
-                    } label: {
-                        MiniProfileView(gitHubUser: user)
+            Section {
+                switch viewModel.state {
+                case .loading:
+                    ProgressView()
+                case .success(let array):
+                    ForEach(array) { user in
+                        Button {
+                            viewModel.onUserTapped?(user)
+                        } label: {
+                            MiniProfileView(gitHubUser: user)
+                        }
                     }
+                case .error(let string):
+                    Text(string)
+                        .foregroundStyle(.red)
                 }
-            case .error(let string):
-                Text(string)
-                    .foregroundStyle(.red)
+            } footer: {
+                VStack {
+                    switch viewModel.footerState {
+                    case .loading:
+                        ProgressView()
+                    case .errorFooter(let string):
+                        Text(string)
+                            .foregroundStyle(.red)
+                    case .idle:
+                        EmptyView()
+                    }
+                }.onAppear {
+                    self.viewModel.loadNextPage()
+                }
+                
             }
         }
         .onAppear(perform: viewModel.loadData)

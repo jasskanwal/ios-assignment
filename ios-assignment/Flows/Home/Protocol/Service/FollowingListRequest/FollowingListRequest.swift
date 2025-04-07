@@ -9,8 +9,9 @@ import Foundation
 
 struct FollowingListRequest: APIRouteable {
     let userName: String
+    let page: Int
     var path: String {
-        "/users/\(userName)/following"
+        "/users/\(userName)/following?page=\(page)"
     }
     
     var method: HTTPMethod {
@@ -21,7 +22,8 @@ struct FollowingListRequest: APIRouteable {
         nil
     }
     
-    init(userName: String) {
+    init(userName: String, page: Int) {
         self.userName = userName
+        self.page = page
     }
 }
