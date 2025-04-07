@@ -39,6 +39,9 @@
 		2A68DB172DA3642F0066AE01 /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB162DA3642F0066AE01 /* GithubUser.swift */; };
 		2A68DB192DA365AB0066AE01 /* SearchUsernameContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB182DA365AB0066AE01 /* SearchUsernameContract.swift */; };
 		2A68DB1C2DA373B60066AE01 /* SearchUsernameRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB1B2DA373B60066AE01 /* SearchUsernameRequest.swift */; };
+		2A68DB202DA3831E0066AE01 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB1F2DA3831E0066AE01 /* ProfileView.swift */; };
+		2A68DB222DA383300066AE01 /* ProfileViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB212DA383300066AE01 /* ProfileViewAssembly.swift */; };
+		2A68DB252DA383780066AE01 /* ProfileViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB242DA383780066AE01 /* ProfileViewContract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +98,9 @@
 		2A68DB182DA365AB0066AE01 /* SearchUsernameContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsernameContract.swift; sourceTree = "<group>"; };
 		2A68DB1B2DA373B60066AE01 /* SearchUsernameRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsernameRequest.swift; sourceTree = "<group>"; };
 		2A68DB1D2DA378900066AE01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2A68DB1F2DA3831E0066AE01 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		2A68DB212DA383300066AE01 /* ProfileViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewAssembly.swift; sourceTree = "<group>"; };
+		2A68DB242DA383780066AE01 /* ProfileViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewContract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +233,7 @@
 		2A68DAD72DA3483E0066AE01 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				2A68DB232DA3836B0066AE01 /* ProfileView */,
 				2A68DB0D2DA362EB0066AE01 /* SearchUsername */,
 			);
 			path = Scene;
@@ -408,6 +415,16 @@
 		2A68DB1E2DA380F60066AE01 /* ProfileView */ = {
 			isa = PBXGroup;
 			children = (
+				2A68DB1F2DA3831E0066AE01 /* ProfileView.swift */,
+				2A68DB212DA383300066AE01 /* ProfileViewAssembly.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		2A68DB232DA3836B0066AE01 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				2A68DB242DA383780066AE01 /* ProfileViewContract.swift */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -553,9 +570,12 @@
 				2A68DAF32DA3483E0066AE01 /* CoordinatorProtocol.swift in Sources */,
 				2A68DB172DA3642F0066AE01 /* GithubUser.swift in Sources */,
 				2A68DAEE2DA3483E0066AE01 /* HomeCoordinator.swift in Sources */,
+				2A68DB222DA383300066AE01 /* ProfileViewAssembly.swift in Sources */,
 				2A68DB0C2DA361920066AE01 /* HomeCoordinatorAssembly.swift in Sources */,
+				2A68DB202DA3831E0066AE01 /* ProfileView.swift in Sources */,
 				2A68DB142DA3634A0066AE01 /* SearchUsernameViewModel.swift in Sources */,
 				2A68DAED2DA3483E0066AE01 /* AppCoordinatorProtocol.swift in Sources */,
+				2A68DB252DA383780066AE01 /* ProfileViewContract.swift in Sources */,
 				2A68DAF12DA3483E0066AE01 /* HomeDataService.swift in Sources */,
 				2A68DAF82DA3483E0066AE01 /* Router.swift in Sources */,
 				2A68DB192DA365AB0066AE01 /* SearchUsernameContract.swift in Sources */,

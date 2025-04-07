@@ -10,10 +10,16 @@ import SwiftUI
 
 class HomeCoordinator: RootCoordinator, HomeCoordinatorProtocol {
     let searchUsernameViewFactory: ((((GitHubUser) -> Void)?) -> SearchUsernameViewProtocol)?
-    
+    let profileViewAssembly: ((GitHubUser,
+                               ((GitHubUser) -> Void)?,
+                               ((GitHubUser) -> Void)?) -> ProfileViewProtocol)?
     init(navigationController: Router,
-         searchUsernameViewFactory: ((((GitHubUser) -> Void)?) -> SearchUsernameViewProtocol)?) {
+         searchUsernameViewFactory: ((((GitHubUser) -> Void)?) -> SearchUsernameViewProtocol)?,
+         profileViewAssembly: ((GitHubUser,
+                                    ((GitHubUser) -> Void)?,
+                                    ((GitHubUser) -> Void)?) -> ProfileViewProtocol)?) {
         self.searchUsernameViewFactory = searchUsernameViewFactory
+        self.profileViewAssembly = profileViewAssembly
         
         super.init(navigationController: navigationController)
     }

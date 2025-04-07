@@ -11,7 +11,8 @@ class HomeCoordinatorAssembly {
     static func homeCoordinatorFactory() -> ((Router) -> HomeCoordinatorProtocol) {
         return { router in
             HomeCoordinator(navigationController: router, 
-                            searchUsernameViewFactory: SearchUsernameAssembly.SearchUsernameViewAssembly())
+                            searchUsernameViewFactory: SearchUsernameAssembly.SearchUsernameViewAssembly(),
+                            profileViewAssembly: ProfileViewAssembly.ProfileViewAssembly())
         }
     }
 }
