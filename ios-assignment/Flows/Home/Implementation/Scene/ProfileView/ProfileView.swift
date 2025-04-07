@@ -35,7 +35,7 @@ struct ProfileView: ProfileViewProtocol, View {
                             viewModel.followersTapped()
                         } label: {
                             VStack {
-                                Text("\(viewModel.user.followers)")
+                                Text("\(viewModel.user.followers ?? 0)")
                                     .bold()
                                 Text("Followers")
                             }
@@ -45,7 +45,7 @@ struct ProfileView: ProfileViewProtocol, View {
                             viewModel.followingTapped()
                         } label: {
                             VStack {
-                                Text("\(viewModel.user.following)")
+                                Text("\(viewModel.user.following ?? 0)")
                                     .bold()
                                 Text("Following")
                             }

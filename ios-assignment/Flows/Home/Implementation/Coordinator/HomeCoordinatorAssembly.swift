@@ -12,7 +12,8 @@ class HomeCoordinatorAssembly {
         return { router in
             HomeCoordinator(navigationController: router, 
                             searchUsernameViewFactory: SearchUsernameAssembly.SearchUsernameViewAssembly(),
-                            profileViewAssembly: ProfileViewAssembly.ProfileViewAssembly())
+                            profileViewFactory: ProfileViewAssembly.ProfileViewAssembly(),
+                            followerFollowingListFactory: FollowerFollowingListAssembly.FollowerFollowingListAssembly())
         }
     }
 }

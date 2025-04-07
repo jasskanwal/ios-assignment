@@ -13,6 +13,6 @@ struct GitHubUser: Codable, Identifiable, Hashable {
     let name: String?
     let avatar_url: String
     let bio: String?
-    let followers: Int
-    let following: Int
+    let followers: Int?
+    let following: Int?
 }

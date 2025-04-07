@@ -9,8 +9,30 @@ import SwiftUI
 
 struct FollowerFollowingListView: FollowerFollowingListViewProtocol, View {
     @StateObject var viewModel: FollowerFollowingListViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            switch viewModel.state {
+            case .loading:
+                ProgressView()
+            case .success(let array):
+                ForEach(array) { user in
+                    Button {
+                        viewModel.onUserTapped?(user)
+                    } label: {
+                        MiniProfileView(gitHubUser: user)
+                    }
+                }
+            case .error(let string):
+                Text(string)
+                    .foregroundStyle(.red)
+            }
+        }
+        .onAppear(perform: viewModel.loadData)
+        .navigationTitle(viewModel.type == .followers ? "Followers" : "Following")
+        .refreshable {
+            self.viewModel.loadData()
+        }
     }
     
     init(viewModel: FollowerFollowingListViewModel) {
@@ -26,5 +48,6 @@ struct FollowerFollowingListView: FollowerFollowingListViewProtocol, View {
                                                            followers: 4,
                                                            following: 6),
                                                type: .followers,
-                                               onUserTapped: nil))
+                                               onUserTapped: nil,
+                                               homeDataService: HomeDataService.shared))
 }

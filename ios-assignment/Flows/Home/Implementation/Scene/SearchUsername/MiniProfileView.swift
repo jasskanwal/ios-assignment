@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct MiniProfileView: View {
+    let gitHubUser: GitHubUser
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            AsyncImage(url: URL(string: gitHubUser.avatar_url)) { image in
+                image.resizable()
+            } placeholder: {
+                Color.gray
+            }
+            .frame(width: 50, height: 50)
+            .clipShape(Circle())
+            
+            VStack(alignment: .leading) {
+                Text(gitHubUser.name ?? "No Name")
+                    .font(.headline)
+                Text("@\(gitHubUser.login)")
+                    .foregroundColor(.gray)
+            }
+            Spacer()
+            Image(systemName: "chevron.right")
+        }
     }
-}
-
-#Preview {
-    MiniProfileView()
 }

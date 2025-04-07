@@ -12,7 +12,10 @@ class FollowerFollowingListAssembly {
                                                      FollowerFollowingListViewModel.UserListType,
                                                      ((GitHubUser) -> Void)?) -> FollowerFollowingListViewProtocol)? {
         return { user, type, onTap in
-            let viewModel = FollowerFollowingListViewModel(user: user, type: type, onUserTapped: onTap)
+            let viewModel = FollowerFollowingListViewModel(user: user,
+                                                           type: type,
+                                                           onUserTapped: onTap,
+                                                           homeDataService: HomeDataService.shared)
             return FollowerFollowingListView(viewModel: viewModel)
         }
     }

@@ -47,6 +47,7 @@
 		2A68DB2D2DA389680066AE01 /* FollowerFollowingListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB2C2DA389680066AE01 /* FollowerFollowingListContract.swift */; };
 		2A68DB302DA38D320066AE01 /* FollowersListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB2F2DA38D320066AE01 /* FollowersListRequest.swift */; };
 		2A68DB332DA38D6A0066AE01 /* FollowingListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB322DA38D6A0066AE01 /* FollowingListRequest.swift */; };
+		2A68DB352DA38E200066AE01 /* MiniProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB342DA38E200066AE01 /* MiniProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		2A68DB2C2DA389680066AE01 /* FollowerFollowingListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerFollowingListContract.swift; sourceTree = "<group>"; };
 		2A68DB2F2DA38D320066AE01 /* FollowersListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListRequest.swift; sourceTree = "<group>"; };
 		2A68DB322DA38D6A0066AE01 /* FollowingListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingListRequest.swift; sourceTree = "<group>"; };
+		2A68DB342DA38E200066AE01 /* MiniProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -406,6 +408,7 @@
 			children = (
 				2A68DB0F2DA3630B0066AE01 /* SearchUsernameView.swift */,
 				2A68DB112DA363280066AE01 /* SearchUsernameAssembly.swift */,
+				2A68DB342DA38E200066AE01 /* MiniProfileView.swift */,
 			);
 			path = SearchUsername;
 			sourceTree = "<group>";
@@ -619,6 +622,7 @@
 				2A68DAF32DA3483E0066AE01 /* CoordinatorProtocol.swift in Sources */,
 				2A68DB172DA3642F0066AE01 /* GithubUser.swift in Sources */,
 				2A68DAEE2DA3483E0066AE01 /* HomeCoordinator.swift in Sources */,
+				2A68DB352DA38E200066AE01 /* MiniProfileView.swift in Sources */,
 				2A68DB222DA383300066AE01 /* ProfileViewAssembly.swift in Sources */,
 				2A68DB0C2DA361920066AE01 /* HomeCoordinatorAssembly.swift in Sources */,
 				2A68DB282DA3894B0066AE01 /* FollowerFollowingListView.swift in Sources */,
