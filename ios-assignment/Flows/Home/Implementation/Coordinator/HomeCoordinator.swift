@@ -9,10 +9,10 @@ import Foundation
 import SwiftUI
 
 class HomeCoordinator: RootCoordinator, HomeCoordinatorProtocol {
-    let searchUsernameViewFactory: (() -> SearchUsernameViewProtocol)?
+    let searchUsernameViewFactory: ((((GitHubUser) -> Void)?) -> SearchUsernameViewProtocol)?
     
     init(navigationController: Router,
-         searchUsernameViewFactory: (() -> SearchUsernameViewProtocol)?) {
+         searchUsernameViewFactory: ((((GitHubUser) -> Void)?) -> SearchUsernameViewProtocol)?) {
         self.searchUsernameViewFactory = searchUsernameViewFactory
         
         super.init(navigationController: navigationController)
@@ -23,10 +23,15 @@ class HomeCoordinator: RootCoordinator, HomeCoordinatorProtocol {
     }
     
     func showSearchUsername() -> AnyView {
-        guard let searchUsernameView = searchUsernameViewFactory?() as? SearchUsernameView else {
+        let onUserNameTap: ((GitHubUser) -> Void) = showUserProfile(using:)
+        guard let searchUsernameView = searchUsernameViewFactory?(onUserNameTap) as? SearchUsernameView else {
             fatalError("searchUsernameView not resolved")
         }
         
         return searchUsernameView.eraseToAnyView()
+    }
+    
+    func showUserProfile(using user: GitHubUser) {
+        
     }
 }

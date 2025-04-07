@@ -201,6 +201,7 @@
 		2A68DAD32DA3483E0066AE01 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				2A68DB1E2DA380F60066AE01 /* ProfileView */,
 				2A68DB0E2DA362F90066AE01 /* SearchUsername */,
 			);
 			path = Scene;
@@ -402,6 +403,13 @@
 				2A68DB1B2DA373B60066AE01 /* SearchUsernameRequest.swift */,
 			);
 			path = SearchUsernameRequest;
+			sourceTree = "<group>";
+		};
+		2A68DB1E2DA380F60066AE01 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProfileView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

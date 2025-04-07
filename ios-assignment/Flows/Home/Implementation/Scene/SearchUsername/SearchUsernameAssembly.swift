@@ -8,9 +8,11 @@
 import SwiftUI
 
 class SearchUsernameAssembly {
-    static func SearchUsernameViewAssembly() -> (() -> SearchUsernameViewProtocol)? {
-        return {
-            SearchUsernameView(viewModel: SearchUsernameViewModel(homeDataService: HomeDataService.shared))
+    static func SearchUsernameViewAssembly() -> ((((GitHubUser) -> Void)?) -> SearchUsernameViewProtocol)? {
+        return { onTap in
+            let viewModel = SearchUsernameViewModel(homeDataService: HomeDataService.shared)
+            viewModel.onUserProfileTap = onTap
+            return SearchUsernameView(viewModel: viewModel)
         }
     }
 }
