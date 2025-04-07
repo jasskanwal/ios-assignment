@@ -46,7 +46,9 @@ struct SearchUsernameView: SearchUsernameViewProtocol, View {
                                 .foregroundColor(.gray)
                         }
                         Spacer()
+                        Image(systemName: "chevron.right")
                     }
+                    .padding()
                 }
             case .error(let string):
                 Text(string)
