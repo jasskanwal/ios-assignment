@@ -13,7 +13,7 @@ class ProfileViewAssembly {
                                            ((GitHubUser) -> Void)?,
                                            ((GitHubUser) -> Void)?) -> ProfileViewProtocol)? {
         return { user, onFollowerTap, onFollowingTap in
-            let viewModel = ProfileViewModel(user: user)
+            let viewModel = ProfileViewModel(user: user, homeDataService: HomeDataService.shared)
             viewModel.onFollowersTapped = onFollowerTap
             viewModel.onFollowingTapped = onFollowingTap
             return ProfileView(viewModel: viewModel)

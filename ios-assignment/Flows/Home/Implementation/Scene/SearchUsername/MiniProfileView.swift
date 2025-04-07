@@ -20,10 +20,16 @@ struct MiniProfileView: View {
             .clipShape(Circle())
             
             VStack(alignment: .leading) {
-                Text(gitHubUser.name ?? "No Name")
-                    .font(.headline)
-                Text("@\(gitHubUser.login)")
-                    .foregroundColor(.gray)
+                if let name = gitHubUser.name {
+                    Text(name)
+                        .font(.headline)
+                    Text("@\(gitHubUser.login)")
+                        .foregroundColor(.gray)
+                } else {
+                    Text("@\(gitHubUser.login)")
+                        .font(.headline)
+                }
+                
             }
             Spacer()
             Image(systemName: "chevron.right")
