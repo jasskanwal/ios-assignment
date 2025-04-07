@@ -38,6 +38,18 @@ class HomeCoordinator: RootCoordinator, HomeCoordinatorProtocol {
     }
     
     func showUserProfile(using user: GitHubUser) {
+        guard let profileView = profileViewAssembly?(user,
+                                                     showFollowers(for:),
+                                                     showFollowing(for:)) as? ProfileView else {
+            fatalError("profileView not resolved")
+        }
         
+        self.navigationController.present(profileView.toNavigable(with: "profile_\(user.login)"))
+    }
+    
+    func showFollowers(for user: GitHubUser) {
+    }
+    
+    func showFollowing(for user: GitHubUser) {
     }
 }
