@@ -14,4 +14,9 @@ class HomeDataService: HomeDataServiceProtocol {
     init(networkService: NetworkServiceProtocol) {
         self.networkService = networkService
     }
+    
+    func fetchUser(username: String, completion: @escaping (Result<GitHubUser, NetworkError>) -> Void) {
+        let request = SearchUsernameRequest(userName: username)
+        self.networkService.request(using: request, completion: completion)
+    }
 }
