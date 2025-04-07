@@ -33,6 +33,11 @@
 		2A68DB072DA34F720066AE01 /* AppCoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB062DA34F720066AE01 /* AppCoordinatorAssembly.swift */; };
 		2A68DB0A2DA34FF00066AE01 /* MainViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB092DA34FF00066AE01 /* MainViewAssembly.swift */; };
 		2A68DB0C2DA361920066AE01 /* HomeCoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB0B2DA361920066AE01 /* HomeCoordinatorAssembly.swift */; };
+		2A68DB102DA3630B0066AE01 /* SearchUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB0F2DA3630B0066AE01 /* SearchUsernameView.swift */; };
+		2A68DB122DA363280066AE01 /* SearchUsernameAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB112DA363280066AE01 /* SearchUsernameAssembly.swift */; };
+		2A68DB142DA3634A0066AE01 /* SearchUsernameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB132DA3634A0066AE01 /* SearchUsernameViewModel.swift */; };
+		2A68DB172DA3642F0066AE01 /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB162DA3642F0066AE01 /* GithubUser.swift */; };
+		2A68DB192DA365AB0066AE01 /* SearchUsernameContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68DB182DA365AB0066AE01 /* SearchUsernameContract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +87,11 @@
 		2A68DB062DA34F720066AE01 /* AppCoordinatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorAssembly.swift; sourceTree = "<group>"; };
 		2A68DB092DA34FF00066AE01 /* MainViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewAssembly.swift; sourceTree = "<group>"; };
 		2A68DB0B2DA361920066AE01 /* HomeCoordinatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorAssembly.swift; sourceTree = "<group>"; };
+		2A68DB0F2DA3630B0066AE01 /* SearchUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsernameView.swift; sourceTree = "<group>"; };
+		2A68DB112DA363280066AE01 /* SearchUsernameAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsernameAssembly.swift; sourceTree = "<group>"; };
+		2A68DB132DA3634A0066AE01 /* SearchUsernameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsernameViewModel.swift; sourceTree = "<group>"; };
+		2A68DB162DA3642F0066AE01 /* GithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUser.swift; sourceTree = "<group>"; };
+		2A68DB182DA365AB0066AE01 /* SearchUsernameContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsernameContract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +197,7 @@
 		2A68DAD32DA3483E0066AE01 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				2A68DB0E2DA362F90066AE01 /* SearchUsername */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -211,6 +222,7 @@
 		2A68DAD72DA3483E0066AE01 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				2A68DB0D2DA362EB0066AE01 /* SearchUsername */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -218,6 +230,7 @@
 		2A68DADA2DA3483E0066AE01 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				2A68DB152DA3641F0066AE01 /* GithubUser */,
 				2A68DAD92DA3483E0066AE01 /* HomeDataServiceProtocol.swift */,
 			);
 			path = Service;
@@ -352,6 +365,32 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		2A68DB0D2DA362EB0066AE01 /* SearchUsername */ = {
+			isa = PBXGroup;
+			children = (
+				2A68DB132DA3634A0066AE01 /* SearchUsernameViewModel.swift */,
+				2A68DB182DA365AB0066AE01 /* SearchUsernameContract.swift */,
+			);
+			path = SearchUsername;
+			sourceTree = "<group>";
+		};
+		2A68DB0E2DA362F90066AE01 /* SearchUsername */ = {
+			isa = PBXGroup;
+			children = (
+				2A68DB0F2DA3630B0066AE01 /* SearchUsernameView.swift */,
+				2A68DB112DA363280066AE01 /* SearchUsernameAssembly.swift */,
+			);
+			path = SearchUsername;
+			sourceTree = "<group>";
+		};
+		2A68DB152DA3641F0066AE01 /* GithubUser */ = {
+			isa = PBXGroup;
+			children = (
+				2A68DB162DA3642F0066AE01 /* GithubUser.swift */,
+			);
+			path = GithubUser;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -484,16 +523,20 @@
 			files = (
 				2A68DB002DA34BDF0066AE01 /* MainContract.swift in Sources */,
 				2A68DB0A2DA34FF00066AE01 /* MainViewAssembly.swift in Sources */,
+				2A68DB102DA3630B0066AE01 /* SearchUsernameView.swift in Sources */,
 				2A68DAF72DA3483E0066AE01 /* NavigableView.swift in Sources */,
 				2A68DAEC2DA3483E0066AE01 /* AppCoordinator.swift in Sources */,
 				2A68DB072DA34F720066AE01 /* AppCoordinatorAssembly.swift in Sources */,
 				2A68DAFB2DA349A50066AE01 /* Coordinator.swift in Sources */,
 				2A68DAF32DA3483E0066AE01 /* CoordinatorProtocol.swift in Sources */,
+				2A68DB172DA3642F0066AE01 /* GithubUser.swift in Sources */,
 				2A68DAEE2DA3483E0066AE01 /* HomeCoordinator.swift in Sources */,
 				2A68DB0C2DA361920066AE01 /* HomeCoordinatorAssembly.swift in Sources */,
+				2A68DB142DA3634A0066AE01 /* SearchUsernameViewModel.swift in Sources */,
 				2A68DAED2DA3483E0066AE01 /* AppCoordinatorProtocol.swift in Sources */,
 				2A68DAF12DA3483E0066AE01 /* HomeDataService.swift in Sources */,
 				2A68DAF82DA3483E0066AE01 /* Router.swift in Sources */,
+				2A68DB192DA365AB0066AE01 /* SearchUsernameContract.swift in Sources */,
 				2A68DAF02DA3483E0066AE01 /* HomeDataServiceProtocol.swift in Sources */,
 				2A68DB052DA34CEB0066AE01 /* NavigationView.swift in Sources */,
 				2A68DA4F2DA347510066AE01 /* ios_assignmentApp.swift in Sources */,
@@ -501,6 +544,7 @@
 				2A68DAF22DA3483E0066AE01 /* View+Extension.swift in Sources */,
 				2A68DAF42DA3483E0066AE01 /* NetworkServiceProtocol.swift in Sources */,
 				2A68DAF52DA3483E0066AE01 /* NetworkService.swift in Sources */,
+				2A68DB122DA363280066AE01 /* SearchUsernameAssembly.swift in Sources */,
 				2A68DAEF2DA3483E0066AE01 /* HomeCoordinatorProtocol.swift in Sources */,
 				2A68DAF62DA3483E0066AE01 /* SessionManager.swift in Sources */,
 			);

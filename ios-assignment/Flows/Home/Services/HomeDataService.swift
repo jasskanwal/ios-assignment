@@ -7,8 +7,9 @@
 
 import Foundation
 class HomeDataService: HomeDataServiceProtocol {
-    let networkService: NetworkServiceProtocol
+    static let shared = HomeDataService(networkService: NetworkService.shared)
     
+    let networkService: NetworkServiceProtocol
     
     init(networkService: NetworkServiceProtocol) {
         self.networkService = networkService

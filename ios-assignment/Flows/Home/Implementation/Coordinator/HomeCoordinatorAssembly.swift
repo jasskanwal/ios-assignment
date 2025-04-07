@@ -10,7 +10,8 @@ import Foundation
 class HomeCoordinatorAssembly {
     static func homeCoordinatorFactory() -> ((Router) -> HomeCoordinatorProtocol) {
         return { router in
-            HomeCoordinator(navigationController: router)
+            HomeCoordinator(navigationController: router, 
+                            searchUsernameViewFactory: SearchUsernameAssembly.SearchUsernameViewAssembly())
         }
     }
 }
